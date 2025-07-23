@@ -1,92 +1,115 @@
-# Exploratory testing app
+# Exploratory Testing App
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A Next.js application for exploratory testing with AI-powered scenario generation.
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/nimbleapproach/v0-exploratory-testing-app)
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/T7Ttnc7CkBO)
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+This application provides tools for exploratory testing with intelligent scenario generation capabilities. It features AI-powered test case creation using Google Gemini and supports both manual and automated testing workflows.
 
-## Deployment
+### v0.dev Integration
 
-Your project is live at:
+This repository is automatically synced with your [v0.dev](https://v0.dev) deployments. Any changes made to your deployed app will be automatically pushed to this repository from v0.dev.
 
-**[https://vercel.com/nimbleapproach/v0-exploratory-testing-app](https://vercel.com/nimbleapproach/v0-exploratory-testing-app)**
+## Features
 
-## Build your app
+- **AI-Powered Scenario Generation**: Leverage Google Gemini to automatically generate comprehensive test scenarios
+- **Interactive Testing Interface**: Modern UI built with Next.js and Tailwind CSS
+- **Flexible Testing Modes**: Run with AI-enhanced scenarios or use predefined test cases
+- **Component Library**: Built with Radix UI components for consistent user experience
+- **TypeScript Support**: Full type safety throughout the application
 
-Continue building your app on:
+## Live Demo
 
-**[https://v0.dev/chat/projects/T7Ttnc7CkBO](https://v0.dev/chat/projects/T7Ttnc7CkBO)**
+🚀 **Live Application**: [v0-exploratory-testing-app.vercel.app](https://vercel.com/nimbleapproach/v0-exploratory-testing-app)
 
-## How It Works
+## Development
 
+Continue building and modifying this app on [v0.dev](https://v0.dev/chat/projects/T7Ttnc7CkBO)
+
+### Workflow
 1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+2. Deploy your changes from the v0 interface
+3. Changes are automatically synced to this repository
+4. Vercel deploys the latest version automatically
 
 ## Running Locally
 
-To run this application locally on your machine:
-
 ### Prerequisites
-- Node.js 18+ installed on your system
-- npm or yarn package manager
 
-### Installation Steps
+- **Node.js 18+** installed on your system
+- **pnpm** package manager (recommended) or npm/yarn
+
+### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
-   git clone https://github.com/your-username/exploratory-testing-app.git
-   cd exploratory-testing-app
-   \`\`\`
+   ```bash
+   git clone https://github.com/bradleyreaney/Exploratory-Testing-App.git
+   cd Exploratory-Testing-App
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
+   pnpm install
+   # or with npm
    npm install
-   # or
-   yarn install
-   \`\`\`
+   ```
 
-3. **Set up environment variables**
-   \`\`\`bash
-   cp .env.example .env.local
-   \`\`\`
-   
-   Edit `.env.local` and add your API keys:
-   \`\`\`
-   GEMINI_API_KEY=your_gemini_api_key_here
-   \`\`\`
-
-4. **Run the development server**
-   \`\`\`bash
+3. **Start the development server**
+   ```bash
+   pnpm dev
+   # or with npm
    npm run dev
-   # or
-   yarn dev
-   \`\`\`
+   ```
 
-5. **Open your browser**
+4. **Open your browser**
    
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the application running.
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
 ### Available Scripts
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the application for production
-- `npm run start` - Start the production server
-- `npm run test` - Run the test suite
-- `npm run lint` - Run ESLint for code quality checks
+- `pnpm dev` / `npm run dev` - Start the development server
+- `pnpm build` / `npm run build` - Build the application for production
+- `pnpm start` / `npm run start` - Start the production server
+- `pnpm lint` / `npm run lint` - Run ESLint for code quality checks
 
-### API Configuration
+### Testing
 
-The application supports AI-powered scenario generation using Google Gemini. To enable this feature:
+This project uses Vitest for testing. Run tests with:
+```bash
+# Install test dependencies and run tests
+pnpm test
+# or with npm
+npm test
+```
 
-1. Get a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Add it to your `.env.local` file as shown above
-3. The application will automatically detect the API key and enable AI mode
+## Configuration
 
-Without an API key, the application will run in basic mode with predefined scenarios.
+### AI Integration
+
+The application supports AI-powered scenario generation using Google Gemini:
+
+1. **Get API Key**: Obtain a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. **Configure**: Add the key to your `.env.local` file:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+3. **Enable**: The application will automatically detect the API key and enable AI features
+
+**Note**: Without an API key, the application runs in basic mode with predefined scenarios.
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **AI Integration**: Google Gemini
+- **Testing**: Vitest with Testing Library
+- **Language**: TypeScript
+- **Deployment**: Vercel
+
+## Contributing
+
+This project is automatically synced with v0.dev. For major changes, consider using the [v0.dev interface](https://v0.dev/chat/projects/T7Ttnc7CkBO) to maintain the sync workflow.
